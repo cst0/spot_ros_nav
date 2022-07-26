@@ -15,8 +15,8 @@
         <param name="DWAPlannerROS/global_frame_id"   type="string" value="odom" />
         <param name="local_costmap/global_frame"      type="string" value="odom" />
 
-        <param name="global_costmap/robot_base_frame" type="string" value="base_link" />
-        <param name="local_costmap/robot_base_frame"  type="string" value="base_link" />
+        <param name="global_costmap/robot_base_frame" type="string" value="body" />
+        <param name="local_costmap/robot_base_frame"  type="string" value="body" />
 
         <remap from="map" to="/map" /> <!-- just in case there's any goofy namespacing going on -->
     </node>
