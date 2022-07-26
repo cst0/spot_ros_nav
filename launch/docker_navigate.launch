@@ -1,6 +1,6 @@
 <launch>
     <arg name="launch_map"    default="true"                            />
-    <arg name="map_yaml_path" value="$(optenv MAP_YAML_PATH /map.yaml)" />
+    <arg name="map_yaml_path" value="$(optenv MAP_YAML_PATH /maps/map.yaml)" />
 
     <node name="move_base" pkg="move_base" type="move_base" output="screen">
         <rosparam file="/config/costmap_common_params.yaml"       command="load" ns="global_costmap"/>

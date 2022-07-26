@@ -3,4 +3,4 @@
 /bin/bash -c '                          \
     cd ..                             &&\
     set -e                            &&\
-    docker build ./docker -t spot_ros_nav'
+    docker build . -t spot_ros_nav'
