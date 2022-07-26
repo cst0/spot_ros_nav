@@ -1,0 +1,15 @@
+version: '2'
+services:
+  app:
+    image: spot_ros_nav:latest
+    command: ./custom_ros_entry.sh
+    privileged: true
+    network: "host"
+    environment:
+        - DISPLAY=$DISPLAY
+        - QT_X11_NO_MITSHM=1
+    volumes:
+      - '../config:/config:ro'
+      - '../maps:/maps:ro'
+      - '/tmp/.X11-unix:/tmp/.X11-unix:rw'
+      - '/etc/localtime:/etc/localtime:ro'

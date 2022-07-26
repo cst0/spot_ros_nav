@@ -3,14 +3,14 @@
     <arg name="map_yaml_path" value="$(optenv MAP_YAML_PATH /map.yaml)" />
 
     <node name="move_base" pkg="move_base" type="move_base" output="screen">
-        <rosparam file="/costmap_common_params.yaml"       command="load" ns="global_costmap"/>
-        <rosparam file="/costmap_common_params.yaml"       command="load" ns="local_costmap" />
-        <rosparam file="/local_costmap_params.yaml"        command="load"                    />
-        <rosparam file="/global_costmap_params.yaml"       command="load"                    />
-        <rosparam file="/dwa_local_planner_params.yaml"    command="load"                    />
-        <rosparam file="/move_base_params.yaml"            command="load"                    />
-        <rosparam file="/global_planner_params.yaml"       command="load"                    />
-        <rosparam file="/navfn_global_planner_params.yaml" command="load"                    />
+        <rosparam file="/config/costmap_common_params.yaml"       command="load" ns="global_costmap"/>
+        <rosparam file="/config/costmap_common_params.yaml"       command="load" ns="local_costmap" />
+        <rosparam file="/config/local_costmap_params.yaml"        command="load"                    />
+        <rosparam file="/config/global_costmap_params.yaml"       command="load"                    />
+        <rosparam file="/config/dwa_local_planner_params.yaml"    command="load"                    />
+        <rosparam file="/config/move_base_params.yaml"            command="load"                    />
+        <rosparam file="/config/global_planner_params.yaml"       command="load"                    />
+        <rosparam file="/config/navfn_global_planner_params.yaml" command="load"                    />
 
         <param name="DWAPlannerROS/global_frame_id"   type="string" value="odom" />
         <param name="local_costmap/global_frame"      type="string" value="odom" />
