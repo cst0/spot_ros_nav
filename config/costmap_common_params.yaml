@@ -2,7 +2,8 @@ max_obstacle_height: 1.50
 
 footprint_padding: 0.05
 # rough measurements places the spot at 3.05m by 1.3m
-footprint: [[1.525, 0.65], [-1.525, 0.65], [-1.525, -0.65], [1.525, -0.65]]  #  actual (centered)
+robot_radius: 0.5
+#footprint: [[1.525, 0.65], [-1.525, 0.65], [-1.525, -0.65], [1.525, -0.65]]  #  actual (centered)
   # [0     3]
   #  |     |
   #  |  X  |

@@ -1,5 +1,5 @@
 local_costmap:
-  global_frame: odom
+  global_frame: vision
   robot_base_frame: body
   update_frequency: 5.0
   publish_frequency: 2.0
@@ -10,4 +10,4 @@ local_costmap:
   transform_tolerance: 0.5
   plugins:
    - {name: obstacle_layer,  type: "costmap_2d::VoxelLayer"}
-   - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
+     #   - {name: inflation_layer, type: "costmap_2d::InflationLayer"}

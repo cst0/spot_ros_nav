@@ -19,18 +19,10 @@
         <param name="local_costmap/robot_base_frame"  type="string" value="body" />
 
         <remap from="map" to="/map" /> <!-- just in case there's any goofy namespacing going on -->
-        <remap from="cmd_vel" to="/spot/cmd_vel" /> <!-- talk directly to spot -->
     </node>
 
-    <group if="$(arg launch_map)">
-        <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_yaml_path)" />
-    </group>
-
-    <node pkg="amcl" type="amcl" name="amcl" output="screen">
-        <remap from="map" to="/map" />
-
-        <param name="use_map_topic" type="bool"   value="true"      />
-        <param name="base_frame_id" type="string" value="base_link" />
-        <param name="odom_frame_id" type="string" value="vision"      />
-    </node>
+	<node pkg="gmapping" type="gmapping" name="gmapping" output="screen">
+		<param name="base_frame_id" type="string" value="base_link" />
+		<param name="odom_frame_id" type="string" value="vision"      />
+	</node>
 </launch>
