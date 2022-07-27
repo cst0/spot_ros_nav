@@ -19,8 +19,9 @@
         <param name="local_costmap/robot_base_frame"  type="string" value="body" />
 
         <remap from="map" to="/map" /> <!-- just in case there's any goofy namespacing going on -->
-        <remap from="cmd_vel" to="/spot/cmd_vel" /> <!-- talk directly to spot -->
     </node>
+
+    <node pkg="spot_ros_nav" type="cmd_vel_stretcher.py" name="cmd_vel_stretcher" output="screen"/>
 
     <group if="$(arg launch_map)">
         <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_yaml_path)" />
