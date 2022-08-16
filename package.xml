@@ -56,7 +56,7 @@
   <build_depend>geometry_msgs</build_depend>
   <build_depend>map_server</build_depend>
   <build_depend>move_base</build_depend>
-  <build_depend>move_slow_and_clear</build_depend>
+  <!--build_depend>move_slow_and_clear</build_depend-->
   <build_depend>nav_core</build_depend>
   <build_depend>nav_msgs</build_depend>
   <build_depend>navfn</build_depend>
@@ -67,7 +67,7 @@
   <build_export_depend>geometry_msgs</build_export_depend>
   <build_export_depend>map_server</build_export_depend>
   <build_export_depend>move_base</build_export_depend>
-  <build_export_depend>move_slow_and_clear</build_export_depend>
+  <!--build_export_depend>move_slow_and_clear</build_export_depend-->
   <build_export_depend>nav_core</build_export_depend>
   <build_export_depend>nav_msgs</build_export_depend>
   <build_export_depend>navfn</build_export_depend>
@@ -78,7 +78,7 @@
   <exec_depend>geometry_msgs</exec_depend>
   <exec_depend>map_server</exec_depend>
   <exec_depend>move_base</exec_depend>
-  <exec_depend>move_slow_and_clear</exec_depend>
+  <!--exec_depend>move_slow_and_clear</exec_depend-->
   <exec_depend>nav_core</exec_depend>
   <exec_depend>nav_msgs</exec_depend>
   <exec_depend>navfn</exec_depend>

@@ -15,7 +15,6 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   map_server
   move_base
-  move_slow_and_clear
   nav_core
   nav_msgs
   navfn
