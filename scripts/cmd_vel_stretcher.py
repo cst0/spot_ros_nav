@@ -17,7 +17,13 @@ class CmdVelStretcher:
         self.cmd_vel_sub = rospy.Subscriber('cmd_vel', Twist, self.cmd_vel_cb)
         self.cmd_vel_pub = rospy.Publisher('spot/cmd_vel', Twist, queue_size=1)
         self.most_recent = None
-        self.timer = rospy.Timer(rospy.Duration(1/30), self.timer_cb)
+        hz = 30
+        if rospy.has_param("cmd_vel_stretch_hz"):
+            param_hz = rospy.get_param("cmd_vel_stretch_hz")
+            if (type(param_hz) == int or type(param_hz) == float) and param_hz > 0: #type:ignore
+                hz = float(param_hz) #type:ignore
+
+        self.timer = rospy.Timer(rospy.Duration(1/hz), self.timer_cb)
         self.timings = []
         self.last_time = rospy.Time.now().to_sec()
 
