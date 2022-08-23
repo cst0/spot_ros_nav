@@ -20,7 +20,7 @@
 
     <node pkg="gmapping" type="slam_gmapping" name="gmapping" output="screen">
         <remap from="map" to="/map" />
-        <param name="base_frame_id" type="string" value="base_link"     />
+        <param name="base_frame_id" type="string" value="body"     />
         <param name="odom_frame_id" type="string" value="vision" />
     </node>
 
